@@ -117,6 +117,10 @@ class ExportSettings:
     # Store FO4/SSE-style mesh vertices at full precision instead of half precision.
     export_full_precision: bool = False
 
+    # For FO4 skinned meshes, keep half precision but move vertex positions near
+    # the bodypart origin and store the offset in the shape transform.
+    export_recenter_half_precision: bool = False
+
 
 # Custom properties that store import/export settings on objects.
 PYN_BLENDER_XF_PROP = "PYN_BLENDER_XF"
